@@ -14,5 +14,65 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $menu = [
+        [
+            'name' => "Home",
+            'link' => "/"
+        ],
+        [
+            'name' => "Documentation",
+            'link' => "/documentation"
+        ],
+        [
+            'name' => "About us",
+            'link' => "/aboutUs"
+        ],
+    ];
+    $data = [
+        "array" => $menu,
+    ];
+
+    return view('home', $data);
+});
+
+Route::get('/documentation', function () {
+    $menu = [
+        [
+            'name' => "Home",
+            'link' => "/"
+        ],
+        [
+            'name' => "Documentation",
+            'link' => "/documentation"
+        ],
+        [
+            'name' => "About us",
+            'link' => "/aboutUs"
+        ],
+    ];
+    $data = [
+        "array" => $menu,
+    ];
+    return view('documentation', $data);
+});
+
+Route::get('/aboutUs', function () {
+    $menu = [
+        [
+            'name' => "Home",
+            'link' => "/"
+        ],
+        [
+            'name' => "Documentation",
+            'link' => "/documentation"
+        ],
+        [
+            'name' => "About us",
+            'link' => "/aboutUs"
+        ],
+    ];
+    $data = [
+        "array" => $menu,
+    ];
+    return view('aboutUs', $data);
 });
